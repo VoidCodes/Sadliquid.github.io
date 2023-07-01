@@ -1,0 +1,89 @@
+body {
+    text-align:center;
+    font-family:'Dosis',sans-serif;
+    background-color:#adb6e6;
+    color:white;
+}
+
+header {
+    background-color:#adb6e6;
+    height:60px;
+    width:100%;
+}
+
+head {background-color:#adb6e6;}
+
+nav {
+    background-color:#adb6e6;
+    position:fixed;
+    top:0;
+    width:100%;
+}
+
+nav ul li {
+    list-style: none;
+    text-align: center;
+    display: inline;
+}
+
+nav ul li a {
+    padding: 20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius: 15px;
+    margin-right: 20px;
+    background-color:cyan;
+    color: grey;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+a:hover{
+    color:#8AC7DB;
+    background-color:white;
+    transition:0.5s;
+}
+
+#mainheader {
+    padding-top:5px;
+    color:white;
+}
+
+#mainheader:hover {
+    color:#72a7b8;
+    transition:0.5s;
+}
+
+p {
+    font-size:150%;
+}
+
+img {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+ul li {
+    text-align:center;
+    font-size:130%;
+    list-style-position:inside;
+}
+
+#nypsit,iframe {border:10px solid cyan;}
+
+#nypsit:hover,iframe:hover {
+    border-color:white;
+    transition:0.5s;
+}
+
+#song {
+    clear:left;
+    padding-top:15px;
+}
+
+ol li {
+    list-style-image:url(Images/pencil.png);
+    list-style-position:inside;
+}
+
+#pagebuttons {clear:left;}

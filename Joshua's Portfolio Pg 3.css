@@ -1,0 +1,104 @@
+body {
+    text-align:center;
+    font-family:'Dosis',sans-serif;
+    background-color:#adb6e6;
+    color:white;
+}
+
+header {
+    background-color:#adb6e6;
+    height:130px;
+}
+
+nav {
+    overflow:hidden;
+    background-color:#adb6e6;
+    position:fixed;
+    top:0;
+    width:100%;
+}
+
+nav ul li {
+    list-style: none;
+    text-align: center;
+    display: inline;
+}
+
+nav ul li a {
+    padding: 20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius: 15px;
+    margin-right: 20px;
+    background-color:cyan;
+    color:grey;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+a:hover {
+    color:#8AC7DB;
+    background-color:white;
+    transition:0.5s;
+}
+
+ol li {
+    list-style-position:inside;
+    font-size:130%;
+    color:navy;
+}
+
+ol li:hover {
+    color:white;
+    transition:0.5s;
+}
+
+p {font-size:150%;}
+
+#mainheader {
+    padding-top:5px;
+    color:white;
+}
+
+#mainheader:hover {
+    color:#72a7b8;
+    transition:0.5s;
+}
+
+ul li {
+    font-size:130%;
+    text-align:center;
+    list-style-position:inside;
+}
+
+p {
+    font-size:150%;
+}
+
+table {
+    color:navy;
+    background-color:cyan;
+    border: 2px solid white;
+    border-collapse:collapse;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+th {
+    background-color:peachpuff;
+    font-size:130%;
+}
+
+td:hover {
+    background-color:white;
+    color:cyan;
+    transition:0.2s;
+}
+
+td {
+    width:200px;
+    height:30px;
+    font-size:130%;
+}
+
+caption {font-size:130%;}
