@@ -1,0 +1,32 @@
+body {
+    text-align:center;
+    font-family:'Dosis',sans-serif;
+    background: linear-gradient(#d5d6e6, #adb6e6);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color:navy;
+}
+
+#mainheader {
+    padding-top:5px;
+    color:navy;
+    text-align:left;
+    margin-left:5px;
+    transition:0.5s;
+}
+
+#mainheader:hover {
+    font-size:230%;
+    transition:0.5s;
+}
+
+p {
+    font-size:150%;
+}
+
+ol li {
+    list-style-position:inside;
+    font-size:150%;
+}
+
+#content {text-align:left;}
