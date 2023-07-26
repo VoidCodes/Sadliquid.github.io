@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <script type="text/javascript">
+        let n = window.sessionStorage.getItem('formsession');
+            if (!n){
+                alert("Kindly help me fill in this feedback form. Your time and effort is greatly appreciated. Thank you!");
+                window.sessionStorage.setItem('formsession', n);
+            }
+            var index = 1
+            var second_index = 0
+            function change_theme(){
+                body_colors = ['linear-gradient(#d5d6e6, #adb6e6)', 'linear-gradient(#ffafbd, #ffc3a0)', 'linear-gradient(#a1c4fd, #c2e9fb)', 'linear-gradient(#ddd6f3, #faaca8)']
+                nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+                document.getElementById("dynamicbody").style.backgroundImage = body_colors[index];
+                document.getElementById("dynamicbody").querySelector('#outerfieldset').style.backgroundImage = body_colors[index];
+                document.getElementById('navul').querySelector("#dynamicheader1").style.backgroundColor = nav_bg_colors[index]
+                document.getElementById('navul').querySelector("#dynamicheader1").style.color = 'navy'
+                document.getElementById('navul').querySelector("#dynamicheader2").style.backgroundColor = nav_bg_colors[index]
+                document.getElementById('navul').querySelector("#dynamicheader2").style.color = 'navy'
+                document.getElementById('navul').querySelector("#dynamicheader3").style.backgroundColor = nav_bg_colors[index]
+                document.getElementById('navul').querySelector("#dynamicheader3").style.color = 'navy'
+                document.getElementById('navul').querySelector("#dynamicheader4").style.backgroundColor = nav_bg_colors[index]
+                document.getElementById('navul').querySelector("#dynamicheader4").style.color = 'navy'
+                document.getElementById('navul').querySelector("#dynamicheader5").style.backgroundColor = nav_bg_colors[index]
+                document.getElementById('navul').querySelector("#dynamicheader5").style.color = 'navy'
+                index += 1
+                second_index += 1
+                if (index == 4){
+                    index = 0
+                }
+                if (second_index == 4){
+                    second_index = 0
+                }
+            } 
+        function hover1(){
+            document.getElementById('dynamicheader1').style.backgroundColor = 'white'
+        }
+        function hover2(){
+            document.getElementById('dynamicheader2').style.backgroundColor = 'white'
+        }
+        function hover3(){
+            document.getElementById('dynamicheader3').style.backgroundColor = 'white'
+        }
+        function hover4(){
+            document.getElementById('dynamicheader4').style.backgroundColor = 'white'
+        }
+        function hover5(){
+            document.getElementById('dynamicheader5').style.backgroundColor = 'white'
+        }
+
+
+        function leave1(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader1').style.backgroundColor = nav_bg_colors[second_index]
+        }
+        function leave2(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader2').style.backgroundColor = nav_bg_colors[second_index]
+        }
+        function leave3(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader3').style.backgroundColor = nav_bg_colors[second_index]
+        }
+        function leave4(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader4').style.backgroundColor = nav_bg_colors[second_index]
+        }
+        function leave5(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader5').style.backgroundColor = nav_bg_colors[second_index]
+        }
+    </script>
+    <title>♥ My Portfolio ♥</title>
+    <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="Pg5.css">
+</head>
+<header id="dynamicbody">
+<nav>
+    <ul id="navul">
+        <li title="Go back to the home page"><a href="Pg1.html" id="dynamicheader1">Home</a></li>
+        <li title="View my achivements"><a href="Pg2.html" id="dynamicheader2">My achievements</a></li>
+        <li title="Take a look at my hobbies"><a href="Pg3.html" id="dynamicheader3">My hobbies</a></li>
+        <li title="Review my work"><a href="Pg4.html" id="dynamicheader4">My work</a></li>
+        <li title="Change the background color of the webpage here!"><a onclick="change_theme()" id="dynamicheader5">Change theme</a></li>
+    </ul>
+</nav>
+</header>
+<h1 id="mainheader">Feedback Form</h1>
+<body id="dynamicbody">
+    <div id="content">
+    <form action="Feedbackprocessor.html" method="get">
+    <div id="dynamicbody">
+    <fieldset id="outerfieldset">
+        <fieldset>
+            <legend>User Interface</legend>
+            <label for="userfeel" title="How did you feel after using the webpage?">What do you think of the <b><em>user interface?</em></b></label>
+            <select name="userfeel" id="userfeel">
+                <option value="excellent">It's Excellent!</option>
+                <option value="great">It's Great!</option>
+                <option value="good">It's Good!</option>
+                <option value="decent">It's Decent</option>
+                <option value="poor">It's Poor</option>
+            </select><br>
+            <label for="navigation" title="How easy was navigating between the various pages?">What do you think about the <b><em>navigation</em></b> between pages?</label>
+            <select name="navigation" id="navigation">
+                <option value="very easy">Very easy!</option>
+                <option value="pretty easy">Pretty easy!</option>
+                <option value="easy">Easy!</option>
+                <option value="rather easy">Rather easy</option>
+                <option value="difficult">Difficult</option>
+            </select><br>
+        </fieldset>
+        <fieldset>
+            <legend>Aesthetics</legend>
+            <label for="colorscheme" title="How pleasing to the eye was the color scheme?">How is the <b><em>color scheme</em></b> of the webpage?</label>
+            <select name="colorscheme" id="colorscheme">
+                <option value="very pleasing to the eye">Very pleasing to the eye!</option>
+                <option value="pretty pleasing to the eye">Pretty pleasing to the eye!</option>
+                <option value="pleasing to the eye">Pleasing to the eye!</option>
+                <option value="fairly pleasing to the eye">It's fair</option>
+                <option value="displeasing">It's Poor</option>
+            </select><br>
+            <label for="readability" title="How readable is the font used?">How is the <b><em>font</em></b> of the webpage?</label>
+            <select name="readability" id="readability">
+                <option value="very readable">Very readable!</option>
+                <option value="pretty readable">Pretty readable!</option>
+                <option value="readable">Readable!</option>
+                <option value="fairly readable">It's fair</option>
+                <option value="unreadable">It's Poor</option>
+            </select><br>
+            <label for="organisation" title="How organised is the layout of the webpage?">How is the <b><em>layout</em></b> of the webpage?</label>
+            <select name="organisation" id="organisation">
+                <option value="very organised">Very organised!</option>
+                <option value="pretty organised">Pretty organised!</option>
+                <option value="organised">It's organised!</option>
+                <option value="fairly organised">It's fairly organised.</option>
+                <option value="poorly organised">It's Poor</option>
+            </select><br>
+        </fieldset>
+        <fieldset>
+            <legend>Functionality</legend>
+            <label for="information" title="How much did you get to know about me after reading through my portfolio?">How informative was the webpage?</label>
+            <select name="information" id="information">
+                <option value="very informative">Very informative!</option>
+                <option value="pretty informative">Pretty informative!</option>
+                <option value="informative">Informative!</option>
+                <option value="fairly informative">Fairly informative.</option>
+                <option value="uninformative">it's poor</option>
+            </select><br>
+            <label for="features" title="E.g How nice is the navigation bar?">What do you feel about the webpage's features?</label>
+            <select name="features" id="features">
+                <option value="very functional">Very functional!</option>
+                <option value="pretty functional">Pretty functional!</option>
+                <option value="functional">Functional!</option>
+                <option value="fairly functional">Fairly functional.</option>
+                <option value="lacking in functionality">It's poor</option>
+            </select><br>
+        </fieldset>
+        <fieldset>
+            <legend>User details</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="username" id="username" autofocus="autofocus" placeholder="Your name" required="required"><br>
+            <label for="email">Email address:</label>
+            <input type="email" name="email" id="email" placeholder="Your email address" required="required"><br>
+            <label for="webpage">Webpage:</label>
+            <input type="text" name="webpage" id="webpage" readonly="readonly" disabled="disabled" value="Joshua's Portfolio"><br>
+            <label for="comments">Comments (OPTIONAL):</label><br>
+            <textarea rows="4" cols="50" placeholder="Leave any comments here!" name="comments" id="comments"></textarea>
+        </fieldset>
+        <input type="submit" value="Submit" id="formbutton">
+        <input type="reset" value="Discard changes" id="formbutton">
+    </fieldset>
+    </div>
+    </form>
+    </div>
+</body>
+<script>
+    document.getElementById('dynamicheader1').addEventListener("mouseover", hover1)
+    document.getElementById('dynamicheader1').addEventListener("mouseout", leave1)
+    document.getElementById('dynamicheader2').addEventListener("mouseover", hover2)
+    document.getElementById('dynamicheader2').addEventListener("mouseout", leave2)
+    document.getElementById('dynamicheader3').addEventListener("mouseover", hover3)
+    document.getElementById('dynamicheader3').addEventListener("mouseout", leave3)
+    document.getElementById('dynamicheader4').addEventListener("mouseover", hover4)
+    document.getElementById('dynamicheader4').addEventListener("mouseout", leave4)
+    document.getElementById('dynamicheader5').addEventListener("mouseover", hover5)
+    document.getElementById('dynamicheader5').addEventListener("mouseout", leave5)
+</script>
+<p></p>
+<button><a href="#top">Back to top</a></button>
+<button><a href="mailto:230627w@mymail.nyp.edu.sg">Email me</a></button>
+</html>

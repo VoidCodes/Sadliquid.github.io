@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <script type="text/javascript">
+        let n = window.sessionStorage.getItem('hobbysession');
+             if (!n){
+                alert("These are some of my hobbies!")
+                window.sessionStorage.setItem('hobbysession', n);
+             }
+            var index = 1
+            var second_index = 0
+            function change_theme(){
+                body_colors = ['linear-gradient(#d5d6e6, #adb6e6)', 'linear-gradient(#ffafbd, #ffc3a0)', 'linear-gradient(#a1c4fd, #c2e9fb)', 'linear-gradient(#ddd6f3, #faaca8)']
+                nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+
+                document.getElementById("dynamicbody").style.backgroundImage = body_colors[index];
+                document.getElementById('navul').querySelector("#dynamicheader1").style.backgroundColor = nav_bg_colors[index]
+                document.getElementById('navul').querySelector("#dynamicheader1").style.color = 'navy'
+                document.getElementById('navul').querySelector("#dynamicheader2").style.backgroundColor = nav_bg_colors[index]
+                document.getElementById('navul').querySelector("#dynamicheader2").style.color = 'navy'
+                document.getElementById('navul').querySelector("#dynamicheader3").style.backgroundColor = nav_bg_colors[index]
+                document.getElementById('navul').querySelector("#dynamicheader3").style.color = 'navy'
+                document.getElementById('navul').querySelector("#dynamicheader4").style.backgroundColor = nav_bg_colors[index]
+                document.getElementById('navul').querySelector("#dynamicheader4").style.color = 'navy'
+                document.getElementById('navul').querySelector("#dynamicheader5").style.backgroundColor = nav_bg_colors[index]
+                document.getElementById('navul').querySelector("#dynamicheader5").style.color = 'navy'
+                index += 1
+                second_index += 1
+                if (index == 4){
+                    index = 0
+                }
+                if (second_index == 4){
+                    second_index = 0
+                }
+
+                nodeList1 = document.querySelectorAll('th')
+                for (i=0;i<nodeList1.length;i++){
+                    nodeList1[i].style.backgroundColor = nav_bg_colors[second_index]
+                    if (second_index == 4){
+                        second_index = 0
+                    }
+                }
+                nodeList2 = document.querySelectorAll('td')
+                for (j=0;j<nodeList2.length;j++){
+                    nodeList2[j].style.backgroundColor = body_colors[index]
+                    if (second_index == 4){
+                        second_index = 0
+                    }   
+                }
+            }
+        function hover1(){
+            document.getElementById('dynamicheader1').style.backgroundColor = 'white'
+        }
+        function hover2(){
+            document.getElementById('dynamicheader2').style.backgroundColor = 'white'
+        }
+        function hover3(){
+            document.getElementById('dynamicheader3').style.backgroundColor = 'white'
+        }
+        function hover4(){
+            document.getElementById('dynamicheader4').style.backgroundColor = 'white'
+        }
+        function hover5(){
+            document.getElementById('dynamicheader5').style.backgroundColor = 'white'
+        }
+
+
+        function leave1(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader1').style.backgroundColor = nav_bg_colors[second_index]
+        }
+        function leave2(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader2').style.backgroundColor = nav_bg_colors[second_index]
+        }
+        function leave3(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader3').style.backgroundColor = nav_bg_colors[second_index]
+        }
+        function leave4(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader4').style.backgroundColor = nav_bg_colors[second_index]
+        }
+        function leave5(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader5').style.backgroundColor = nav_bg_colors[second_index]
+        }
+    </script>
+    <title>♥ Joshua's Portfolio ♥</title>
+    <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="Pg3.css">
+</head>
+<header id="dynamicbody">
+<nav>
+    <ul id="navul">
+        <li title="Go back to the home page"><a href="Pg1.html" id="dynamicheader1">Home</a></li>
+        <li title="View my achivements"><a href="Pg2.html" id="dynamicheader2">My achievements</a></li>
+        <li title="Review my work"><a href="Pg4.html" id="dynamicheader3">My work</a></li>
+        <li title="Leave your feedback here"><a href="Pg5.html" id="dynamicheader4">Feedback Form</a></li>
+        <li title="Change the background color of the webpage here!"><a onclick="change_theme()" id="dynamicheader5">Change theme</a></li>
+    </ul>
+</nav>
+</header>
+<h1 id="mainheader">My Hobbies</h1>
+<body id="dynamicbody">
+    <p>
+        Not only am I interested in the area of IT, but i am very passionate about my hobbies as well!<br>
+        Here's my Non-Academic Timetable:
+    </p>
+    <table border="1">
+        <caption>My Non-Academic Timetable</caption>
+        <tr><th>Day</th><th>Activity</th><th>Duration</th></tr>
+        <tr><td>Mon</td><td rowspan="2">Workout</td><td rowspan="2">1 Hour</td></tr>
+        <tr><td>Tue</td></tr>
+        <tr><td>Wed</td><td>Badminton</td><td>2 Hours</td></tr>
+        <tr><td>Thu</td><td>Piano</td><td>45 mins</td></tr>
+        <tr><td>Fri</td><td>Workout</td><td>1 Hour</td></tr>
+        <tr><td>Sat</td><td>Morning Run</td><td>1 Hour</td></tr>
+        <tr><td>Sun</td><td colspan="3">Gathering with friends!</td></tr>
+    </table>
+    <p>
+        I am a very passionate Badminton player and go for training once a week at my nearby Community Centre.<br>
+        I am a huge Pokémon fan too! I love collecting the collectible Pokémon Cards and slowly completing my collection.<br>
+        Take a look at some of my favourite Pokémon!<br>
+    </p>
+    <ul>
+        <li title="An electric-type pokémon. Has super soft and stretchy cheeks.">Pikachu</li>
+        <li title="A water-type pokémon. Is strong enough to heft boulders.">Mudkip</li>
+        <li title="A fire-type pokémon. Spits fire hot enough to melt boulders and is known to unintentionally cause forest fires.">Charizard</li>
+        <li title="A normal-type pokémon. May mutate when exposed to radiation from elemental stones.">Eevee</li>
+        <li title="A psychic-type pokémon. It's so rare that they are hardly seen.">Mew</li>
+        <li title="A water-type pokémon. It hates accepting food from people.">Piplup</li>
+    </ul><br>
+    <p>
+        I have been learning to play the piano since the age of 11. Below are examples of  some pieces I can play!
+    </p>
+    <ol>
+        <a href="https://www.youtube.com/watch?v=7maJOI3QMu0"><li>River flows in you - Yiruma</li></a>
+        <a href="https://www.youtube.com/watch?v=VZHNeZmdA0w"><li>Someone you loved - Lewis Capaldi</li></a>
+        <a href="https://www.youtube.com/watch?v=sbTVZMJ9Z2I"><li>Moonlight Sonata 1st Mov. (WIP) - Ludwig van Beethoven</li></a>
+    </ol>
+</body>
+<script>
+    document.getElementById('dynamicheader1').addEventListener("mouseover", hover1)
+    document.getElementById('dynamicheader1').addEventListener("mouseout", leave1)
+    document.getElementById('dynamicheader2').addEventListener("mouseover", hover2)
+    document.getElementById('dynamicheader2').addEventListener("mouseout", leave2)
+    document.getElementById('dynamicheader3').addEventListener("mouseover", hover3)
+    document.getElementById('dynamicheader3').addEventListener("mouseout", leave3)
+    document.getElementById('dynamicheader4').addEventListener("mouseover", hover4)
+    document.getElementById('dynamicheader4').addEventListener("mouseout", leave4)
+    document.getElementById('dynamicheader5').addEventListener("mouseover", hover5)
+    document.getElementById('dynamicheader5').addEventListener("mouseout", leave5)
+</script>
+<button><a href="#top">Back to top</a></button>
+<button><a href="mailto:230627w@mymail.nyp.edu.sg">Email me</a></button>
+</html>

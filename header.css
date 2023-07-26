@@ -1,0 +1,38 @@
+header {
+    height:60px;
+    width:100%;
+
+}
+
+nav {
+    top:0;
+    width:100%;
+}
+
+nav ul li {
+    list-style: none;
+    text-align: center;
+    display: inline;
+}
+
+nav ul li a {
+    padding:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius: 15px;
+    margin-right: 20px;
+    background-color:#adb6e6;
+    color: navy;
+    font-size:110%;
+    transition:0.4s;
+}
+
+ul li {font-size:130%;}
+
+nav ul li a:hover {
+    color:#8AC7DB;
+    background-color:white;
+    padding-right: 50px;
+    padding-left: 50px;
+    transition:0.4s;
+}

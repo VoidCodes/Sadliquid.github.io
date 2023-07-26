@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <script type="text/javascript">
+        var today = new Date();
+        let hours = parseInt((today.getHours()));
+        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        let n = window.sessionStorage.getItem('name');
+             
+        if (!n){
+                n = prompt("Hello! What's your name?")
+                window.sessionStorage.setItem('name', n);
+        
+                if (hours < 12) {
+                    if (n != ''){
+                        alert("Good Morning " + n + "! Welcome to my portfolio!");
+                    }
+                    else{
+                        alert("Good Morning! Welcome to my portfolio!");
+                    }
+                }
+                else if (hours < 17) {
+                    if (n != ''){
+                        alert("Good Afternoon " + n + "! Welcome to my portfolio!");
+                    }
+                    else{
+                        alert("Good Afternoon! Welcome to my portfolio!");
+                    }
+                }
+                else {
+                    if (n != ''){
+                        alert("Good Evening " + n + "! Welcome to my portfolio!");
+                    }
+                    else{
+                        alert("Good Evening! Welcome to my portfolio!");
+                    }
+                }
+        }
+        var index = 1
+        var second_index = 0
+        function change_theme(){
+            body_colors = ['linear-gradient(#d5d6e6, #adb6e6)', 'linear-gradient(#ffafbd, #ffc3a0)', 'linear-gradient(#a1c4fd, #c2e9fb)', 'linear-gradient(#ddd6f3, #faaca8)']
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById("dynamicbody").style.backgroundImage = body_colors[index];
+
+            document.getElementById("nypsit").style.borderColor = nav_bg_colors[index];
+            document.getElementById("lky").style.borderColor = nav_bg_colors[index];
+
+            document.getElementById('navul').querySelector("#dynamicheader1").style.backgroundColor = nav_bg_colors[index]
+            document.getElementById('navul').querySelector("#dynamicheader1").style.color = 'navy'
+            document.getElementById('navul').querySelector("#dynamicheader2").style.backgroundColor = nav_bg_colors[index]
+            document.getElementById('navul').querySelector("#dynamicheader2").style.color = 'navy'
+            document.getElementById('navul').querySelector("#dynamicheader3").style.backgroundColor = nav_bg_colors[index]
+            document.getElementById('navul').querySelector("#dynamicheader3").style.color = 'navy'
+            document.getElementById('navul').querySelector("#dynamicheader4").style.backgroundColor = nav_bg_colors[index]
+            document.getElementById('navul').querySelector("#dynamicheader4").style.color = 'navy'
+            document.getElementById('navul').querySelector("#dynamicheader5").style.backgroundColor = nav_bg_colors[index]
+            document.getElementById('navul').querySelector("#dynamicheader5").style.color = 'navy'
+            index += 1
+            second_index += 1
+            if (index == 4){
+                index = 0
+            }
+            if (second_index == 4){
+                second_index = 0
+            }
+        }  
+        function hover1(){
+            document.getElementById('dynamicheader1').style.backgroundColor = 'white'
+        }
+        function hover2(){
+            document.getElementById('dynamicheader2').style.backgroundColor = 'white'
+        }
+        function hover3(){
+            document.getElementById('dynamicheader3').style.backgroundColor = 'white'
+        }
+        function hover4(){
+            document.getElementById('dynamicheader4').style.backgroundColor = 'white'
+        }
+        function hover5(){
+            document.getElementById('dynamicheader5').style.backgroundColor = 'white'
+        }
+        function hover6(){
+            document.getElementById('nypsit').style.borderColor = 'white'
+        }
+        function hover7(){
+            document.getElementById('lky').style.borderColor = 'white'
+        }
+
+
+        function leave1(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader1').style.backgroundColor = nav_bg_colors[second_index]
+        }
+        function leave2(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader2').style.backgroundColor = nav_bg_colors[second_index]
+        }
+        function leave3(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader3').style.backgroundColor = nav_bg_colors[second_index]
+        }
+        function leave4(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader4').style.backgroundColor = nav_bg_colors[second_index]
+        }
+        function leave5(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('dynamicheader5').style.backgroundColor = nav_bg_colors[second_index]
+        }
+        function leave6(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('nypsit').style.borderColor = nav_bg_colors[second_index]
+        }
+        function leave7(){
+            nav_bg_colors = ['#adb6e6', '#f79860', '#c2e9fb', '#faaca8']
+            document.getElementById('lky').style.borderColor = nav_bg_colors[second_index]
+        }
+
+    </script>
+    <title>♥ My Portfolio ♥</title>
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet'>
+    <header id="dynamicbody">
+        <nav>
+            <ul id="navul">
+                <li title="View my achivements"><a href="Pg2.html" id="dynamicheader1">My achievements</a></li>
+                <li title="Take a look at my hobbies"><a href="Pg3.html" id="dynamicheader2"">My hobbies</a></li>
+                <li title="Review my work"><a href="Pg4.html" id="dynamicheader3">My work</a></li>
+                <li title="Leave your feedback here"><a href="Pg5.html" id="dynamicheader4">Feedback Form</a></li>
+                <li title="Change the background color of the webpage here!"><a onclick="change_theme()" id="dynamicheader5">Change theme</a></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+<body id="dynamicbody">
+    <h1 id="mainheader">Joshua's Portfolio</h1>
+    <h2 id="list">All about me!</h1>
+    <p>
+        Hello! I am Joshua Long and am currently studying at Nanyang Polytechnic.<br> 
+        I am a Year 1 student in the School of Information Technology.<br>
+        I am very passionate in the area of IT and would love to learn more about Artificial Intelligence (AI).<br>
+        Oh and not to mention, Pikachu is one of my favourite Pokémon too!<br>
+        This is how my school looks like! Click on it to be directed to my school's webpage where you'll find out what im studying.<br>
+        <p></p>
+        <div id="dynamicbody">
+        <a href="https://www.nyp.edu.sg/schools/sit/full-time-courses/information-technology.html"><img src="Images/SIT Photo.jpeg" width="900" height="400" id="nypsit"></a><br>
+        </div>
+        <p></p>
+        <p>The modules im taking in Semester 1 include:</p><br>
+        <ul>
+            <li id="list">Core Modules:</li>
+            <ol>
+                <li title="Students will learn basic concepts and principles of information security from personal and enterprise perspectives. It provides an understanding of information security trends, security threats, security incidents, security policies, procedures and guidelines.">Infocomm Security</li>
+                <li title="Students will learn the basic concepts and principles behind computer programs, and the building blocks that are used to create them. Students will understand fundamental programming constructs and basic data structures that will help them to apply their knowledge of computational thinking in practical ways. They will also learn to develop strategies for testing, debugging and apply their programming skills to develop algorithms to solve computational problems.">Programming Essentials</li>
+                <li title="Students will learn the basic concepts of the Internet and hypertext, and how these concepts are integrated to provide World Wide Web applications over the Internet. They will first focus on learning the theory behind current web-based development tools and technologies including HTML, CSS and JavaScript to develop interactive and rich media web pages. Students will then advance to learning how to create optimized responsive web pages for optimal viewing on devices with different screen size and resolution.">Web Development</li>
+                <li title="Students will be equipped with the knowledge in mathematics and analytical skills for developing algorithms in programming. The topics they learn include Number System, Set Theory and Logic, Matrices, Relations, Functions, Differentiation and Integration.">Computing Mathematics</li>
+            </ol>
+            <li id="list">Other modules:</li>
+            <ol start="5">
+                <li title="Students will be able to understand the law and ethics surrounding the use of IT. They will be able to describe issues such as intellectual property rights protection and infringement, copyrights and plagiarism, software piracy, computer crimes, Internet fraud, objectionable materials and confidentiality in the information age. They will also be able to articulate Singapore's laws on cybersecurity, data privacy, etc.">Law & Ethics of IT</li>
+                <li title="Students will develop attributes that are pervasive and synonymous with being innovative and enterprising for career and life. Through this module students will develop positive practices when working with data, propose ideas using user-centric approaches and design processes, determine and locate resources, and leverage collaborative practices to formulate solutions. ">Fundamentals of Innovation and Enterprise</li>
+                <li title="To provide you an all-rounded education, NYP offers General Studies Modules (GSMs). So besides taking modules related directly to your chosen diploma course, you will get exposed to areas beyond your usual field of study. Through a combination of prescribed and elective inter-disciplinary GSMs, you will gain interesting, practical knowledge that can be beneficial to you as you prepare for the world of work and life after graduation.">Understanding SG in a closer look</li>
+                <li title="Communicating well is a vital life skill, benefitting all aspects of our lives from professional life to social gatherings. It is thus important to be proficient in both written and oral communication. This module will enable learners to communicate effectively in different settings and on different collaborative platforms. There will be opportunities to practise and deliver various types of presentations, to learn to competently handle questions, and to effectively incorporate verbal and non-verbal elements when speaking. Learners will also acquire media and info literacy, and be able to produce clearly written and well-structured reports and proposals, following standard citation and referencing guidelines.">Effective Communication Skills</li>
+                <li title="To provide you an all-rounded education, NYP offers General Studies Modules (GSMs). So besides taking modules related directly to your chosen diploma course, you will get exposed to areas beyond your usual field of study. Through a combination of prescribed and elective inter-disciplinary GSMs, you will gain interesting, practical knowledge that can be beneficial to you as you prepare for the world of work and life after graduation.">Personal Career Strategy</li>
+            </ol>
+        </ul><br>
+        <p>I love this match featuring <b>Loh Kean Yew</b> vs <b>Li Shi Feng</b>. Check it out!</p><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/uLm5i5D2-yA?start=602" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="lky"></iframe><br>
+        <div id="song">
+            <p>My favourite song is <b>Let Me Down Slowly</b> by Alec Benjamin. Play it below!</p><br>
+        <audio src="Audio/alecbenjaminaudio.mp3" controls></audio><br>
+        </div>
+    </p>
+</body>
+<script>
+    document.getElementById('dynamicheader1').addEventListener("mouseover", hover1)
+    document.getElementById('dynamicheader1').addEventListener("mouseout", leave1)
+    document.getElementById('dynamicheader2').addEventListener("mouseover", hover2)
+    document.getElementById('dynamicheader2').addEventListener("mouseout", leave2)
+    document.getElementById('dynamicheader3').addEventListener("mouseover", hover3)
+    document.getElementById('dynamicheader3').addEventListener("mouseout", leave3)
+    document.getElementById('dynamicheader4').addEventListener("mouseover", hover4)
+    document.getElementById('dynamicheader4').addEventListener("mouseout", leave4)
+    document.getElementById('dynamicheader5').addEventListener("mouseover", hover5)
+    document.getElementById('dynamicheader5').addEventListener("mouseout", leave5)
+    document.getElementById('nypsit').addEventListener("mouseover", hover6)
+    document.getElementById('nypsit').addEventListener("mouseout", leave6)
+    document.getElementById('lky').addEventListener("mouseover", hover7)
+    document.getElementById('lky').addEventListener("mouseout", leave7)
+</script>
+<button><a href="#top">Back to top</a></button>
+<button><a href="mailto:230627w@mymail.nyp.edu.sg">Email me</a></button>
+</html>
